@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="stylesheet" href="boots/css/bootstrap.css">
+    <link rel="stylesheet" href="css/kerala.css">
+    <link rel="stylesheet" href="css/bgImages.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/xcode.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select-country.min.css">
+
+    <title>Login/Signup</title>
+    </head>
+
+    <body class="loginBody" >
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light" id="navId">
+            <a class="navbar-brand" href="index.html">
+                <img src="backgrounds/1200px-Kerala-God-s-Own-Country-Logo-svg-removebg-preview.png" alt="ktLogo" id="ktLogo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto" id="rightAlign">
+                <li class="nav-item">
+                  <a class="nav-link navElements" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link navElements" href="about.html">About Kerala</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle navElements" href="districts.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      Districts
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-animator" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="districts/alappuzha.html">Alappuzha</a>
+                    <a class="dropdown-item" href="districts/ernakulam.html">Ernakulam</a>
+                    <a class="dropdown-item" href="districts/idukki.html">Idukki</a>
+                    <a class="dropdown-item" href="districts/kannur.html">Kannur</a>
+                    <a class="dropdown-item" href="districts/kasargod.html">Kasargod</a>
+                    <a class="dropdown-item" href="districts/kollam.html">Kollam</a>
+                    <a class="dropdown-item" href="districts/kottayam.html">Kottayam</a>
+                    <a class="dropdown-item" href="districts/kozhikode.html">Kozhikode</a>
+                    <a class="dropdown-item" href="districts/malappuram.html">Malappuram</a>
+                    <a class="dropdown-item" href="districts/palakkad.html">Palakkad</a>
+                    <a class="dropdown-item" href="districts/pathanamthitta.html">Pathanamthitta</a>
+                    <a class="dropdown-item" href="districts/thiruvananthapuram.html">Thiruvananthapuram</a>
+                    <a class="dropdown-item" href="districts/thrissur.html">Thrissur</a>
+                    <a class="dropdown-item" href="districts/wayanad.html">Wayanad</a>
+                  </div>
+                </li>
+                <li class="nav-item navElements">
+                    <a class="nav-link active" href="#">
+                        Login/SignUp
+                    </a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0 searchBar">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchBox">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                  <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </nav>
+          <!-- navbar ends -->
+
+          <div class="row">
+            <!-- Login -->
+            <div class="loginDiv">
+                <h3>Already a Member? <br> Login Here</h3>
+                <br>
+                <form onsubmit="return validLogin()">
+                    <div class="form-group fieldDiv" style="margin-bottom: 0px;">
+                    <input type="email" class="form-control searchBox" id="loginEmail" required aria-describedby="emailHelp" placeholder="E-mail Address">
+                    <label for="loginEmail" class="errorLabel" id="emailLoginError"></label>
+                  </div>
+                    <div class="form-group fieldDiv">
+                    <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Password">
+                    </div>
+                    <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary buttonGroup" style="margin-bottom:15px;" id="loginBtn">Login</button>
+                    <br>
+                    <a href="#" style="color: green;">Forgot e-mail/password?</a>
+                </form>
+            </div>
+            <!-- Login ends -->
+
+            <div class="vtDiv"></div>   <!-- divider -->
+            
+            <!-- Signup -->
+            <div class="signDiv">
+                <h3>Not a Member? <br> Signup Here</h3> <br>
+                <form onsubmit="return validate()">
+                    <div class="form-row">
+                    <div class="form-group col-md-6 fieldDiv" id="emailInputId">
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                    </div>
+                    </div>
+                    <div class="form-group fieldDiv">
+                      <select class="custom-select countrypicker" data-live-search="true"></select>
+                    </div>
+                    <div class="form-group fieldDiv" style="margin-bottom: 0px;">
+                    <input type="email" class="form-control" id="signupEmail" required placeholder="Email Address (eg: johndoe@gmail.com)">
+                    <label for="signupEmail" class="errorLabel" id="emailSignupError"></label>
+                    </div>
+                    <div class="form-group fieldDiv" style="margin-bottom: 0px;">
+                      <input type="text" class="form-control" id="phoneNumber" required placeholder="Phone Number (10 digits)">
+                      <label for="phoneNumber" class="errorLabel" id="numberError"></label>
+                  </div>
+                    <div class="form-group fieldDiv" style="margin-bottom: 0px;">
+                        <input type="password" class="form-control" id="inputPass" required placeholder="Password" oninput = "passStrength()">
+                        <div class="row">
+                          <label for="inputPass" class="errorLabel col-sm-6" id="passError"></label>
+                          <label for="inputPass" class="errorLabel col-md-6" id="passStrLabel"></label>
+                        </div>
+                    </div>
+                    <div class="form-group fieldDiv" style="margin-bottom: 0px;">
+                        <input type="password" class="form-control" id="inputConfPass" required placeholder="Confirm Password">
+                        <label for="inputConfPass" class="errorLabel" id="confError"></label>
+                    </div>
+                    <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                        <label class="form-check-label" for="gridCheck">
+                        I accept the <a href="#"style="color: #1976D2;">Terms of Use</a> & <a href="#" style="color: #1976D2">Privacy Policy</span>
+                        </label>
+                    </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary buttonGroup" id="signupBtn">Sign Up</button>
+                </form>
+            </div>
+            <!-- Signup ends -->
+            </div>
+            
+            <!-- footer -->
+          <footer>
+            <div class="footerDiv">
+              Created by: ANHAR K P
+            </div>
+          </footer>
+          <!-- footer ends -->
+          
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> 
+    <script src="js/validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="js/bootstrap-select-country.min.js"></script>
+  </body>
+
+</html>

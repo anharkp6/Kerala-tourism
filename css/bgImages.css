@@ -1,0 +1,80 @@
+.bgImage
+{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100%;
+    background-repeat: repeat-y;
+    background-size: cover;
+    z-index: -1;
+}
+
+#homeBg
+{
+    background-image: url("../backgrounds/BrownThunderousGiraffe-small.gif");
+    background-position: center;
+}
+
+#alpyBg
+{
+    background-image: url("../backgrounds/alpy.jpg");
+}
+
+#ekmBg
+{
+    background-image: url("../backgrounds/beaches-near-Ernakulam_8th-Jan.jpg");
+}
+
+#iduBg
+{
+    background-image: url("../backgrounds/idukki-87222546-1541760634.jpg");
+}
+
+#kanBg
+{
+    background-image: url("../backgrounds/kannur.jpg");
+}
+
+#kasBg
+{
+    background-image: url("../backgrounds/kasargod.jpg");
+}
+
+#kolBg
+{
+    background-image: url("../backgrounds/kollam.jpg");
+}
+
+#kozhBg
+{
+    background-image: url("../backgrounds/kozhikode.jpg")
+}
+
+#malBg
+{
+    background-image: url("../backgrounds/malappuram.jpg");
+}
+
+#palBg
+{
+    background-image: url("../backgrounds/Palakkad-compressed.jpg")
+}
+
+#pathBg
+{
+    background-image: url("../backgrounds/pathanamthitta.jpg");
+}
+
+#trivBg
+{
+    background-image: url("../backgrounds/trivandrum.jpg");
+}
+
+#thriBg
+{
+    background-image: url("../backgrounds/thrissur.jpg");
+}
+
+#wayBg
+{
+    background-image: url("../backgrounds/wayanad.jpg");
+}
